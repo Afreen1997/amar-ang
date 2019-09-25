@@ -1,0 +1,15 @@
+.checked {
+    color: orange;
+  }
+  .completed{
+background-color: white;
+width: 700px;
+position: relative;
+bottom: 40px;
+margin:  120px;
+
+}
+tr{
+border: 1px solid black;
+padding: 5px;
+}

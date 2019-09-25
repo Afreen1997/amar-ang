@@ -1,0 +1,10 @@
+.completed{
+    font-family:cursive;
+    font-family: cursive;
+    background-color: white;
+    width: 600px;
+   position: relative;
+    bottom: 40px;
+    margin:  190px;
+    border-style: ridge;
+  }
