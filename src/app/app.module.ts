@@ -40,7 +40,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminheaderComponent } from './adminheader/adminheader.component';
 import { TrainerheaderComponent } from './trainerheader/trainerheader.component';
-
+import { UserheaderComponent } from './userheader/userheader.component';
+import { UserpageComponent } from './userpage/userpage.component';
+import { UsercurrenttrainingComponent } from './usercurrenttraining/usercurrenttraining.component';
+import { UsercompletedtrainingComponent } from './usercompletedtraining/usercompletedtraining.component';
+import { UsertrainersearchComponent } from './usertrainersearch/usertrainersearch.component';
+import { SearchComponent } from './search/search.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,10 +84,16 @@ import { TrainerheaderComponent } from './trainerheader/trainerheader.component'
     HeaderComponent,
     FooterComponent,
     AdminheaderComponent,
-    TrainerheaderComponent    
+    TrainerheaderComponent,
+    UserheaderComponent,
+    UserpageComponent,
+    UsercurrenttrainingComponent,
+    UsercompletedtrainingComponent,
+    UsertrainersearchComponent,
+    SearchComponent    
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,Ng2SearchPipeModule,
     AppRoutingModule, FormsModule, HttpClientModule
   ],
   providers: [],

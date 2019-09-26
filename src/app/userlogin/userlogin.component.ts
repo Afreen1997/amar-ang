@@ -37,7 +37,7 @@ this.http.post("http://localhost:3000/user/check", body,
         } else {// we will get the JWT token from REST API / Server then we have to store in the Frontend
           localStorage.setItem('token', result);
           //this.error_message = ""
-          this.router.navigateByUrl('/homepage');
+          this.router.navigateByUrl('/userpage');
           this.error_message = result
         }
       },

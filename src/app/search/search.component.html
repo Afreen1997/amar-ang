@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="search-hero">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+                placeholder="&#61442;  Search here for Mentor details">
+        </div>
+       
+        <table class="table table-striped"  >
+            <thead>
+                <tr>
+                    <th>Trainer_Image</th>
+                    <th>Trainer_Name</th>
+                    <th>Completed_Training</th>
+               
+                  <th>Specializations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let hero of heroes | filter:searchText">
+                        <td><img src="./assets/avatar.jpg"></td>
+                    <td >{{hero.Trainer_Name}}</td>
+                    <td >{{hero.Completed_Training}}</td>
+              
+                    <td>{{hero.Specializations}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<app-footer></app-footer>
