@@ -11,8 +11,10 @@
                 <tr>
                     <th>Trainer_Image</th>
                     <th>Trainer_Name</th>
+                    <th>Years_of_Experience</th>
                     <th>Completed_Training</th>
-               
+                    <th>Fee_Charged</th>
+                    <th>Time_Slot</th>
                   <th>Specializations</th>
                 </tr>
             </thead>
@@ -20,8 +22,10 @@
                 <tr *ngFor="let hero of heroes | filter:searchText">
                         <td><img src="./assets/avatar.jpg"></td>
                     <td >{{hero.Trainer_Name}}</td>
+                    <td>{{hero.Years_of_Experience}}</td>
                     <td >{{hero.Completed_Training}}</td>
-              
+                    <td>{{hero.Fee_Charged}}</td>
+                    <td>{{hero.Time_Slot}}</td>
                     <td>{{hero.Specializations}}</td>
                 </tr>
             </tbody>

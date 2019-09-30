@@ -3,98 +3,21 @@
 
 
 
+
 <table>
-    <tr>
-        <td>
-          Mean Stack </td>
-        <td>
-        <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-        </td>
-        <td>  
-            <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-        </td>
+    <tr><th>Course Name</th><th>Remove Technology</th></tr>
+    <tr *ngFor = "let course of courses">
+     
+      <td>{{course.course_name}}</td>
+      
+      <td><button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')"  (click) = "delete_employee(course._id)"><i class="fa fa-remove"></i>Remove</button></td>
+ 
     </tr>  
-         
-    <tr>
-    <td>
-    TypeScript </td>
-    <td>
-    <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-    </td>
-    <td>  
-    <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-    </td>
-    </tr>       
-        
-    <tr>
-    <td>
-    java </td>
-    <td>
-    <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-    </td>
-    <td>  
-    <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-    </td>
-    </tr>      
-    <tr>
-    <td>
-      Mongo db </td>
-    <td>
-    <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-    </td>
-    <td>  
-        <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-    </td>
-    </tr>      
-    <tr>
-        <td>
-          Python </td>
-        <td>
-        <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-        </td>
-        <td>  
-            <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-        </td>
-    </tr>    
-    <tr>
-            <td>
-              java </td>
-            <td>
-            <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-            </td>
-            <td>  
-                <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-            </td>
-        </tr>      
-        <tr>
-                <td>
-                  TypeScript </td>
-                <td>
-                <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-                </td>
-                <td>  
-                    <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-                </td>
-            </tr>    
-            <tr>
-                    <td>
-                      React</td>
-                    <td>
-                    <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-                    </td>
-                    <td>  
-                        <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-                    </td>
-                </tr>  
-                <tr>
-                        <td>
-                          Oracle </td>
-                        <td>
-                        <button type="button" class="btn btn-info" onclick="alert('Technology Added Successfully')">Add</button>
-                        </td>
-                        <td>  
-                            <button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')">Remove</button>
-                        </td>
-                    </tr>              
-    </table>    
+    
+  </table>    
+ <div class="a"> 
+     <button type="button" class="btn btn-info">Add</button>
+    </div>  
+ 
+
     <app-footer></app-footer>

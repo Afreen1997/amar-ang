@@ -1,0 +1,27 @@
+<!-- <div class="container"> -->
+    <h1>Trainers List</h1>
+    <div class="table-responsive">
+    <table >
+      <tr><th>ID</th><th>User Name</th><th>Email Id</th><th>Years of Experience</th><th>LinkedIN URL</th><th>Mobile Number</th><th>Timezone</th><th>Technology</th><th>Facilities</th><th>Password</th><th>Delete</th><th>Update</th></tr>
+      <tr *ngFor = "let mentor of mentors">
+        <td>{{mentor._id}}</td>
+        <td>{{mentor.user_name}}</td>
+        <td>{{mentor.email_id}}</td>
+        <td>{{mentor.exp}}</td>
+        <td>{{mentor.linkedin_url}}</td>
+        <td>{{mentor.mob_num}}</td>
+        <td>{{mentor.timezone}}</td>
+        <td>{{mentor.Technology}}</td>
+        <td>{{mentor.Facilities}}</td>
+        <td>{{mentor.pass_word}}</td>
+        <td><a (click) = "delete_employee(mentor._id)"><i class="fa fa-remove"></i>Delete</a></td>
+        <td [routerLink] = "['/update', mentor._id]"><a><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Update</a></td>
+      </tr>
+    </table>
+    </div>
+    
+    <div>
+        <p class="red-text">{{error_message}}</p>
+        
+    </div>
+    <!-- </div> -->

@@ -47,6 +47,10 @@ import { UsercompletedtrainingComponent } from './usercompletedtraining/usercomp
 import { UsertrainersearchComponent } from './usertrainersearch/usertrainersearch.component';
 import { SearchComponent } from './search/search.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UsereditComponent } from './useredit/useredit.component';
+import { TrainereditComponent } from './traineredit/traineredit.component';
+import { TrainerlistComponent } from './trainerlist/trainerlist.component';
+import { TrainernotificationComponent } from './trainernotification/trainernotification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,7 +94,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     UsercurrenttrainingComponent,
     UsercompletedtrainingComponent,
     UsertrainersearchComponent,
-    SearchComponent    
+    SearchComponent,
+    UsereditComponent,
+    TrainereditComponent,
+    TrainerlistComponent,
+    TrainernotificationComponent    
   ],
   imports: [
     BrowserModule,Ng2SearchPipeModule,

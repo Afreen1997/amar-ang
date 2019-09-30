@@ -12,6 +12,7 @@ import { Page4Component } from './page4/page4.component';
 import { Pagenotfound404Component } from './pagenotfound404/pagenotfound404.component';
 import { RegisterComponent } from './register/register.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { TrainerlistComponent } from './trainerlist/trainerlist.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { Trainer1profileComponent } from './trainer1profile/trainer1profile.component';
 import { Trainer2profileComponent } from './trainer2profile/trainer2profile.component';
@@ -36,17 +37,22 @@ import { PaymentadminComponent } from './paymentadmin/paymentadmin.component';
 import { EdittechadminComponent } from './edittechadmin/edittechadmin.component';
 import { AdmingrantpermuserComponent } from './admingrantpermuser/admingrantpermuser.component';
 import { AdmingrantpermtrainerComponent } from './admingrantpermtrainer/admingrantpermtrainer.component';
-
-
+import { UsereditComponent } from './useredit/useredit.component';
+import { TrainereditComponent } from './traineredit/traineredit.component';
+import { TrainernotificationComponent } from './trainernotification/trainernotification.component';
 
 const routes: Routes = [
  
   {path:'',   component:HomepageComponent},
   {path:'register',component:RegisterComponent},
   {path:'userlist',component:UserlistComponent},
+  {path:'trainerlist',component:TrainerlistComponent},
   {path:'userpage',component:UserpageComponent},
   {path:'userlogin',component:UserloginComponent},
+  {path:'trainernotification',component:TrainernotificationComponent},
   {path:'itemlist',component:ItemlistComponent},
+  {path:'update_employee/:id',component:UsereditComponent, pathMatch: 'full'},
+  {path:'update/:id',component:TrainereditComponent, pathMatch: 'full'},
   {path:'pg1',component:Page1Component},
   {path:'pg2',component:Page2Component},
   {path:'pg3',component:Page3Component},

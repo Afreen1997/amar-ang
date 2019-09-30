@@ -4,7 +4,12 @@ td, th {
    }
    table{
        position: relative;
-     bottom: 300px;
-     margin:  350px;
-     width: 30%;
+     bottom: 200px;
+     margin:  250px;
+     width: 50%;
    }
+  .a{
+    position: relative;
+    bottom:600px;
+     margin:  450px;
+  }
