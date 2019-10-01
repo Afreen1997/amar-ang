@@ -1,53 +1,20 @@
 <app-adminheader></app-adminheader>
-
-
-
 <table>
-    <tr>
-    
-    <th>Training Fee</th>
-    <th>Commission Percentage</th>
-    <th>Received/Pending</th>
-    </tr>    
-    <tr>
-    
-    <td align="center">70,000/-</td>
-    <td align="center">15%</td>
-    <td align="center">Received <a href="#">
-        <span class="glyphicon glyphicon-check"></span>
-      </a></td>
+    <tr><th>Training Fee</th><th>Commission Percentage</th><th>Received/Pending</th><th>Change Commission</th></tr>
+    <tr *ngFor = "let commission of commissions">
+      <td>{{commission.training_fee}}</td>
+      <td>{{commission.commission_percentage}}</td>
+      <td>{{commission.received_pending}}</td>
+     
+     
+      <td><button type="button" class="btn btn-info" [routerLink] = "['/update_commission', commission._id]"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Change Commission percentage</button></td>
     </tr>
-    <tr>
+  </table>   
+<app-footer></app-footer>
+
+ 
+   
+   
+   
     
-    <td align="center">50,000/-</td>
-    <td align="center">20%</td>
-    <td align="center">Pending <a href="#">
-        <span class="glyphicon glyphicon-time"></span>
-      </a></td>
-    </tr>    
-    <tr>
-      
-        <td align="center">60,000/-</td>
-        <td align="center">15%</td>
-        <td align="center">Pending <a href="#">
-            <span class="glyphicon glyphicon-time"></span>
-          </a></td>
-    </tr>   
-    <tr>
-      
-        <td align="center">40,000/-</td>
-        <td align="center">20%</td>
-        <td align="center">Received
-          <a href="#"><span class="glyphicon glyphicon-check"></span></a>
-        </td>
-    </tr>   
-    <tr>
-        
-        <td align="center">75,000/-</td>
-        <td align="center">25%</td>
-        <td align="center">Pending <a href="#">
-            <span class="glyphicon glyphicon-time"></span>
-          </a></td>
-    </tr>  
-    </table>
-    <app-footer></app-footer>
+    

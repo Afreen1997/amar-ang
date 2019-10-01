@@ -1,0 +1,33 @@
+<app-adminheader></app-adminheader>
+<form (ngSubmit)="submit_form_data()" #form1="ngForm"  class="modal-content">
+ <div class="container">    
+        <h1>Edit Technology</h1>
+              
+              <br>
+              
+            <label for="List of Technology"><b>List of Technology</b></label>
+            <br><br>
+            <input list="Technology" placeholder="Select Technology " [(ngModel)]="Technology" name="Technology" #Technology2="ngModel" class="form-control"> 
+            <span *ngIf="Technology2.invalid && (Technology2.dirty || Technology2.touched)" class="red-text">
+                 <span *ngIf="Technology2.errors.required">Technology is required</span>
+             </span>
+            <datalist id="Technology">
+           <option value="Angular js">
+           <option value="Node js">
+           <option value="Mongo db">
+              <option value="Express.js">
+         </datalist><br><br>       
+          
+         <div class="clearfix">
+                <button [disabled]="!form1.form.valid"  class="signupbtn">Save Changes</button>
+                <button  class="cancelbtn" routerLink="/edittechadmin" routerLinkActive="active" >Cancel</button>
+                </div>
+              
+            
+        
+                  <div>
+                    <br><p class="red-text">{{message}}</p>
+                  </div>
+    </div>
+</form>
+<app-footer></app-footer>

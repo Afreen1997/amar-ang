@@ -51,6 +51,8 @@ import { UsereditComponent } from './useredit/useredit.component';
 import { TrainereditComponent } from './traineredit/traineredit.component';
 import { TrainerlistComponent } from './trainerlist/trainerlist.component';
 import { TrainernotificationComponent } from './trainernotification/trainernotification.component';
+import { AddtechComponent } from './addtech/addtech.component';
+import { EditcommissionComponent } from './editcommission/editcommission.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,9 @@ import { TrainernotificationComponent } from './trainernotification/trainernotif
     UsereditComponent,
     TrainereditComponent,
     TrainerlistComponent,
-    TrainernotificationComponent    
+    TrainernotificationComponent,
+    AddtechComponent,
+    EditcommissionComponent    
   ],
   imports: [
     BrowserModule,Ng2SearchPipeModule,

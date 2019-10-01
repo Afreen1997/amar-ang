@@ -26,7 +26,7 @@ export class EdittechadminComponent implements OnInit {
   delete_employee = function(id) {
     this.http.delete("http://localhost:3000/course/"+id).subscribe(
       (result) => {
-        this.courses = result;
+        //this.courses = result;
         this.error_message = "Deleted"
         this.courses =[];
         this.get_user_list()

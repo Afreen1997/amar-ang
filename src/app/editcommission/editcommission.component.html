@@ -1,0 +1,36 @@
+<app-adminheader></app-adminheader>
+<form (ngSubmit)="submit_form_data()" #form1="ngForm"  class="modal-content">
+ <div class="container">    
+        <h1>Edit Commission Percentage</h1>
+              
+              <br>
+              <label>Training Fee</label><br>
+              <input type="text" [(ngModel)]="training_fee" name="training_fee" #training_fee2="ngModel"  required placeholder="Enter Commission Percentage">
+              <span *ngIf="training_fee2.invalid && (training_fee2.dirty || training_fee2.touched)" class="red-text">
+                <span *ngIf="training_fee2.errors.required"> Training Fee should not be empty.</span>
+                </span><br><br>    
+
+
+              <label>Commission Percentage</label><br>
+              <input type="text" [(ngModel)]="commission_percentage" name="commission_percentage" #commission_percentage2="ngModel"  required placeholder="Enter Commission Percentage">
+              <span *ngIf="commission_percentage2.invalid && (commission_percentage2.dirty || commission_percentage2.touched)" class="red-text">
+                <span *ngIf="commission_percentage2.errors.required"> Commission Percentage should not be empty.</span>
+                </span><br><br>
+
+                <label>Received/Pending</label><br>
+              <input type="text" [(ngModel)]="received_pending" name="received_pending" #received_pending2="ngModel"  required placeholder="Enter Received/Pending Status">
+              <span *ngIf="received_pending2.invalid && (received_pending2.dirty || received_pending2.touched)" class="red-text">
+                <span *ngIf="received_pending2.errors.required"> Training Fee should not be empty.</span>
+                </span><br><br>
+
+          <div class="clearfix">
+                    <button [disabled]="!form1.form.valid"  class="signupbtn">Save Changes</button>
+                    <button  class="cancelbtn" routerLink="/commissionadmin" routerLinkActive="active" >Cancel</button>
+                    </div>
+                  
+                  <div>
+                    <br><p class="red-text">{{message}}</p>
+                  </div>
+    </div>
+</form>
+<app-footer></app-footer>

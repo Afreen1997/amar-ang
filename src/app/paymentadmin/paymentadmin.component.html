@@ -1,45 +1,20 @@
 <app-adminheader></app-adminheader>
-
-
-
 <table>
-    <tr>
-    <th>Trainer Name</th>
-    <th>Training Fee</th>
-    <th>Payment Received</th>
-    <th>Payment Pending</th>
-    </tr>    
-    <tr>
-    <td>Aashish</td>
-    <td>70,000/-</td>
-    <td>35,000/-</td>
-    <td>35,000/-</td>
-    </tr>
-    <tr>
-    <td>Vinoth</td>
-    <td>50,000/-</td>
-    <td>20,000/-</td>
-    <td>30,000/-</td>
-    </tr>    
-    <tr>
-        <td>Prakash</td>
-        <td>60,000/-</td>
-        <td>30,000/-</td>
-        <td>30,000/-</td>
-    </tr>   
-    <tr>
-        <td>Shamim</td>
-        <td>40,000/-</td>
-        <td>20,000/-</td>
-        <td>20,000/-</td>
-    </tr>   
-    <tr>
-        <td>Gowtham</td>
-        <td>75,000/-</td>
-        <td>37,000/-</td>
-        <td>38,000/-</td>
-    </tr>  
-    </table>    
-                       
+        <tr>
+                <th>Trainer Name</th>
+                <th>Training Fee</th>
+                <th>Payment Received</th>
+                <th>Payment Pending</th>
+       </tr>    
+        <tr *ngFor = "let payment of payments">
+          <td>{{payment.trainer_name}}</td>
+          <td>{{payment.trainer_fee}}</td>
+          <td>{{payment.payment_received}}</td>
+          <td>{{payment.payment_pending}}</td>
+        </tr>
+      </table>
+
+
+         
     <app-footer></app-footer>
     

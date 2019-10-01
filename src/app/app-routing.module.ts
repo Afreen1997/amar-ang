@@ -40,6 +40,8 @@ import { AdmingrantpermtrainerComponent } from './admingrantpermtrainer/admingra
 import { UsereditComponent } from './useredit/useredit.component';
 import { TrainereditComponent } from './traineredit/traineredit.component';
 import { TrainernotificationComponent } from './trainernotification/trainernotification.component';
+import { AddtechComponent } from './addtech/addtech.component';
+import { EditcommissionComponent } from './editcommission/editcommission.component';
 
 const routes: Routes = [
  
@@ -53,6 +55,8 @@ const routes: Routes = [
   {path:'itemlist',component:ItemlistComponent},
   {path:'update_employee/:id',component:UsereditComponent, pathMatch: 'full'},
   {path:'update/:id',component:TrainereditComponent, pathMatch: 'full'},
+  {path:'update_course/:id',component:AddtechComponent, pathMatch: 'full'},
+  {path:'update_commission/:id',component:EditcommissionComponent, pathMatch: 'full'},
   {path:'pg1',component:Page1Component},
   {path:'pg2',component:Page2Component},
   {path:'pg3',component:Page3Component},

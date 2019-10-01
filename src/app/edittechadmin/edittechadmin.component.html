@@ -5,19 +5,17 @@
 
 
 <table>
-    <tr><th>Course Name</th><th>Remove Technology</th></tr>
+    <tr><th>Course Name</th><th>Remove Technology</th><th>Update Technology</th></tr>
     <tr *ngFor = "let course of courses">
      
-      <td>{{course.course_name}}</td>
+      <td>{{course.Technology}}</td>
       
       <td><button type="button" class="btn btn-danger" onclick="alert('Technology Removed Successfully')"  (click) = "delete_employee(course._id)"><i class="fa fa-remove"></i>Remove</button></td>
- 
+      <td><button type="button" class="btn btn-info"[routerLink] = "['/update_course', course._id]"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Update Technology</button></td>
     </tr>  
     
   </table>    
- <div class="a"> 
-     <button type="button" class="btn btn-info">Add</button>
-    </div>  
+ 
  
 
     <app-footer></app-footer>
