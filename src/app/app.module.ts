@@ -53,10 +53,10 @@ import { TrainerlistComponent } from './trainerlist/trainerlist.component';
 import { TrainernotificationComponent } from './trainernotification/trainernotification.component';
 import { AddtechComponent } from './addtech/addtech.component';
 import { EditcommissionComponent } from './editcommission/editcommission.component';
+import { PaymentgatewayComponent } from './paymentgateway/paymentgateway.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     HomepageComponent,
     Page1Component,
     Page2Component,
@@ -102,7 +102,8 @@ import { EditcommissionComponent } from './editcommission/editcommission.compone
     TrainerlistComponent,
     TrainernotificationComponent,
     AddtechComponent,
-    EditcommissionComponent    
+    EditcommissionComponent,
+    PaymentgatewayComponent    
   ],
   imports: [
     BrowserModule,Ng2SearchPipeModule,

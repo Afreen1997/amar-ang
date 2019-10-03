@@ -1,30 +1,18 @@
 <app-trainerheader></app-trainerheader>
 <div class="completed"  >
-   
-   
-   
-    <table>
-      <tr>
-        <td>
-   <img src="./assets/meanstack.jpg"></td><td><b>Trainer Name</b>:Vinoth</td><td><b> MeanStack</b> : Completed
+  <table>
+      <tr *ngFor = "let completedtraining of completedtrainings">
+        <td><img src='{{completedtraining.image}}' style="width:60%; margin: 30px;"></td>
+        <td><b>Trainer Name</b>:{{completedtraining.trainer_name}}</td>
+        <td><b>{{completedtraining.technology}}</b>:{{completedtraining.status}}
             <a href="#">
               <span class="glyphicon glyphicon-check"></span>
             </a>
-          </td>
-     
-         </tr>
-        
-        
-         <tr>
-        <td>
-        
-        <img src="./assets/typescript.png" style="width:60%; margin: 30px;"></td><td><b>Trainer Name</b>:Shamim</td><td><b> TypeScript</b>: Completed
-                <a href="#">
-                  <span class="glyphicon glyphicon-check"></span>
-                </a>
-              </td>
-              
-     </tr>
-                        </table>    
-                        </div>
+        </td>
+      </tr>
+  </table>    
+</div>
 <app-footer></app-footer>
+
+
+    

@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-trainerheader></app-trainerheader>
 <form (ngSubmit)="submit_form_data()" #form1="ngForm"  class="modal-content">
  <div class="container">    
         <h1>Signup for Mentor</h1>
@@ -112,7 +112,7 @@
           
               <div class="clearfix">
                     <button [disabled]="!form1.form.valid"  class="signupbtn">Sign Up</button>
-                    <button  class="cancelbtn" routerLink="/homepage" routerLinkActive="active" >Cancel</button>
+                    <button  class="cancelbtn" routerLink="/trainerpage" routerLinkActive="active" >Cancel</button>
                     </div>
                   
                   <div>

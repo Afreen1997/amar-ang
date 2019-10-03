@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
     <div class="row">
-        <div class="search-hero">
+        <div class="search-trainer">
             <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
                 placeholder="&#61442;  Search here for Mentor details">
         </div>
@@ -19,14 +19,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let hero of heroes | filter:searchText">
-                        <td><img src="./assets/avatar.jpg"></td>
-                    <td >{{hero.Trainer_Name}}</td>
-                    <td>{{hero.Years_of_Experience}}</td>
-                    <td >{{hero.Completed_Training}}</td>
-                    <td>{{hero.Fee_Charged}}</td>
-                    <td>{{hero.Time_Slot}}</td>
-                    <td>{{hero.Specializations}}</td>
+                <tr *ngFor="let trainer of trainers | filter:searchText">
+                        <td><img src='{{trainer.image}}'></td>
+                    <td >{{trainer.Trainer_Name}}</td>
+                    <td>{{trainer.Years_of_Experience}}</td>
+                    <td >{{trainer.Completed_Training}}</td>
+                    <td>{{trainer.Fee_Charged}}</td>
+                    <td>{{trainer.Time_Slot}}</td>
+                    <td>{{trainer.Specializations}}</td>
                 </tr>
             </tbody>
         </table>

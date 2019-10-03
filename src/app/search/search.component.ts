@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -7,18 +7,46 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  
+  constructor(private http: HttpClient) { }
+  
+  error_message='';
   searchText;
-  heroes = [
-    {Trainer_Name:'AASHISH',Years_of_Experience:'5 years', Completed_Training: '3',Fee_Charged:'50,000/-',Time_Slot:'2pm-5pm', Specializations: 'Java,Mongodb,Python' },
-    {Trainer_Name:'VINOTH',Years_of_Experience:'6 years', Completed_Training: '2',Fee_Charged:'70,000/-',Time_Slot:'9am-6pm', Specializations: 'Node.js,Javascript,MEAN stack' },
-    {Trainer_Name:'PRAKASH',Years_of_Experience:'10 years', Completed_Training: '5',Fee_Charged:'40,000/-',Time_Slot:'4pm-7pm', Specializations: 'Agile,Scrum,Full stack' },
-    {Trainer_Name:'SHAMIM',Years_of_Experience:'2 years', Completed_Training: '10',Fee_Charged:'60,000/-',Time_Slot:'11am-7pm', Specializations: '.Net,React,MEAN stack' },
-    {Trainer_Name:'GOWTHAM',Years_of_Experience:'4 years', Completed_Training: '4',Fee_Charged:'50,000/-',Time_Slot:'12pm-5pm', Specializations: '.Net,React,Mongodb' }
-   
-  ];
-  constructor() { }
+  trainers = [];
+  get_user_list = function() {
+    this.http.get("http://localhost:3000/trainer/").subscribe(
+      (result : any[]) => {
+        this.trainers = result;
+        this.error_message = ""
+      },
+      (error) => {
+        this.error_message = "Error occured, check whether Backend is running!";
+        console.log(error)
+      }
+    )
+  }
+
+  delete_employee = function(id) {
+    this.http.delete("http://localhost:3000/trainer/"+id).subscribe(
+      (result) => {
+        //this.courses = result;
+        this.error_message = "Deleted"
+        this.trainers =[];
+        this.get_user_list()
+      },
+      (error) => {
+        this.error_message = "Error occured, check whether Backend is running!";
+        console.log(error)
+      }
+    )
+  }
 
   ngOnInit() {
+    this.get_user_list();
   }
 
 }
+
+
+
+

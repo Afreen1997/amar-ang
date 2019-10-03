@@ -1,10 +1,14 @@
 .completed{
-    font-family:cursive;
-    font-family: cursive;
-    background-color: white;
-    width: 600px;
-   position: relative;
-    bottom: 40px;
-    margin:  190px;
-    border-style: ridge;
-  }
+  font-family:cursive;
+ 
+  background-color: white;
+  
+ position: relative;
+  bottom: 40px;
+  margin:  50px;
+
+  border-style: ridge;
+}
+td,th{
+  padding:4px;
+}
